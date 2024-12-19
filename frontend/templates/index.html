@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelompok 1 Big Data</title>
+    <style>
+        body {
+            background-color: #FE6DA4; /* Pink background */
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* Align items to the top */
+            align-items: center;
+            height: 100vh;
+            color: white; /* Text color set to white */
+            text-align: center;
+            position: relative; /* To allow absolute positioning of the image */
+            padding-top: 220px; /* Move content down from the top */
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin: 0.5em 0;
+        }
+
+        h3 {
+            margin: 0.5em 0;
+            font-size: 1.2em;
+        }
+
+        .button {
+            background-color: #CBF263;
+            color: black;
+            padding: 1em 2em;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            margin: 1em 0.5em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #444;
+        }
+
+        .link-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px; /* Space between buttons */
+        }
+
+        img {
+            position: absolute;
+            bottom: 0;
+            width: 100%; /* Ensure the image takes full width */
+            height: auto; /* Maintain aspect ratio */
+            object-fit: contain; /* Ensure the whole image fits without cropping */
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em; /* Responsive font size */
+            }
+            h3 {
+                font-size: 1em; /* Responsive font size */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>IMPLEMENTASI BIG DATA PADA BANK </h1>
+        <h3>Website ini akan bla bla</h3>
+        <div class="link-container">
+            <a href="/form">
+                <button class="button">The Form</button>
+            </a>
+            <a href="/about">
+                <button class="button">Learn About Us</button>
+            </a>
+        </div>
+    </div>
+    <img src="{{ url_for('static', filename='bankkk.png') }}" alt="bank">
+</body>
+</html>

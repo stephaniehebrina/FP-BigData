@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet Our Team</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Memastikan footer di bagian bawah */
+        }
+
+        .header {
+            background-color: #CBF263; /* Hijau */
+            padding: 20px;
+            text-align: center;
+        }
+
+        .team-member {
+            background-color: #FF6DA4; /* Pink */
+            border-radius: 15px;
+            padding: 30px; /* Menambah padding untuk ukuran lebih besar */
+            margin: 15px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s; /* Efek hover */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Menjaga konten tetap terpusat */
+            height: 300px; /* Mengatur tinggi kartu */
+        }
+
+        .team-member:hover {
+            transform: scale(1.05); /* Membesarkan saat hover */
+        }
+
+        .footer {
+            background-color: #534CD6; /* Biru */
+            color: white;
+            padding: 15px;
+            text-align: center;
+            margin-top: auto; /* Memastikan footer tetap di bawah */
+        }
+
+        .member-photo {
+            border-radius: 50%;
+            width: 100px; /* Ukuran foto */
+            height: 100px; /* Ukuran foto */
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .container {
+            flex: 1; /* Memastikan container mengisi ruang yang tersisa */
+        }
+
+        .row {
+            justify-content: center; /* Memastikan konten terpusat */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Anggota Kelompok 1</h1>
+        <p>togenim ieyo</p>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <div class="team-member">
+                    <img src="{{ url_for('static', filename='bintang.png') }}" alt="Katy Smith" class="member-photo">
+                    <h3>Si Jelek</h3>
+                    <p>Toge Nim</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="team-member">
+                    <img src="{{ url_for('static', filename='sagi.png') }}" alt="Ann Cole" class="member-photo">
+                    <h3>Stephanie Hebrina</h3>
+                    <p>5027221069</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="team-member">
+                    <img src="{{ url_for('static', filename='sagi.png') }}" alt="Paula Jones" class="member-photo">
+                    <h3>Alma Amir Dewani</h3>
+                    <p>5027221054</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Togenim All rights reserved.</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

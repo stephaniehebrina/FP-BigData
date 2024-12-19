@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Prediksi</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #534cd6;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+        .container {
+            border-radius: 15px;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            width: 100%;
+        }
+        .btn-custom {
+            background-color: #cbf263;
+            color: #000;
+        }
+        .btn-custom:hover {
+            background-color: #b0d755;
+        }
+        .result {
+            color: {{ color }};
+        }
+    </style>
+</head>
+<body>
+    <div class="container text-center">
+        <h1 class="mb-4">Hasil Prediksi</h1>
+        <p class="lead">Klasifikasi nasabah:</p>
+        <h2 class="result">{{ hasil }}</h2>
+        <a href="/" class="btn btn-custom mt-4">Kembali ke Form</a>
+    </div>
+</body>
+</html>

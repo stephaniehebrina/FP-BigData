@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Data Nasabah</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            display: flex;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .left-side {
+            background-color: #FE6DA4; /* Biru */
+            color: white;
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .right-side {
+            background-color: #cbf263; /* Hijau */
+            flex: 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+            margin: auto; /* Memusatkan card */
+        }
+
+        h2 {
+            color: #534cd6; /* Biru */
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h3 {
+            color: #ffffff; /* Biru */
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            color: #495057;
+        }
+
+        .form-control {
+            border-radius: 12px;
+            padding: 12px;
+            border: 1px solid #ced4da;
+        }
+
+        .form-control:focus {
+            border-color: #534cd6; /* Biru */
+            box-shadow: 0 0 5px rgba(83, 76, 214, 0.25);
+        }
+
+        .btn-submit {
+            background-color: #534cd6; /* Biru */
+            color: white;
+            border-radius: 12px;
+            padding: 12px 25px;
+            font-size: 1.2rem;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .btn-submit:hover {
+            background-color: #4b3dc4; /* Darker Blue */
+        }
+
+        .radio-buttons label {
+            margin-right: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="left-side">
+        <div>
+            <h1><strong>Marketing Analysis Using Random Forest Classifier</strong></h1>
+            <h3>Mengklasifikasi nasabah yang berpotensial membuka deposito</h3>
+            <button class="btn btn-light">Learn More</button>
+        </div>
+    </div>
+    <div class="right-side">
+        <div class="card">
+            <h2>Form Data Nasabah</h2>
+            <form method="POST" action="/submit_form">                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="usia">Usia Nasabah</label>
+                        <input type="number" class="form-control" id="usia" name="usia" required />
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="jenis_pekerjaan">Jenis Pekerjaan Nasabah</label>
+                        <select class="form-control" id="jenis_pekerjaan" name="jenis_pekerjaan" required>
+                            <option value="">Pilih...</option>
+                            <option value="admin.">Admin.</option>
+                            <option value="blue-collar">Blue Collar</option>
+                            <option value="entrepreneur">Entrepreneur</option>
+                            <option value="housemaid">Housemaid</option>
+                            <option value="management">Management</option>
+                            <option value="retired">Retired</option>
+                            <option value="self-employed">Self Employed</option>
+                            <option value="services">Services</option>
+                            <option value="student">Student</option>
+                            <option value="technician">Technician</option>
+                            <option value="unemployed">Unemployed</option>
+                            <option value="unknown">Unknown</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="status_pernikahan">Status Pernikahan Nasabah</label>
+                        <select class="form-control" id="status_pernikahan" name="status_pernikahan" required>
+                            <option value="">Pilih...</option>
+                            <option value="divorced">Divorced</option>
+                            <option value="married">Married</option>
+                            <option value="single">Single</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="pendidikan">Tingkat Pendidikan Tertinggi</label>
+                        <select class="form-control" id="pendidikan" name="pendidikan" required>
+                            <option value="">Pilih...</option>
+                            <option value="secondary">Secondary</option>
+                            <option value="tertiary">Tertiary</option>
+                            <option value="primary">Primary</option>
+                            <option value="unknown">Unknown</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="saldo_rata_rata">Saldo Rata-Rata Anda dalam Satu Tahun Terakhir</label>
+                        <input type="number" class="form-control" id="saldo_rata_rata" name="saldo_rata_rata" required />
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="durasi_percakapan">Durasi Percakapan Nasabah dengan Pihak Bank (dalam detik)</label>
+                        <input type="number" class="form-control" id="durasi_percakapan" name="durasi_percakapan" required />
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="jumlah_kontak">Berapa Kali Nasabah Telah Dihubungi oleh Bank?</label>
+                        <input type="number" class="form-control" id="jumlah_kontak" name="jumlah_kontak" required />
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="pinjaman_rumah">Nasabah Memiliki Pinjaman untuk Rumah?</label><br />
+                    <div class="radio-buttons">
+                        <label><input type="radio" name="pinjaman_rumah" value="yes" required> Ya</label>
+                        <label><input type="radio" name="pinjaman_rumah" value="no" required> Tidak</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="pinjaman_pribadi">Nasabah Memiliki Pinjaman Pribadi?</label><br />
+                    <div class="radio-buttons">
+                        <label><input type="radio" name="pinjaman_pribadi" value="yes" required> Ya</label>
+                        <label><input type="radio" name="pinjaman_pribadi" value="no" required> Tidak</label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-submit">Kirim</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
