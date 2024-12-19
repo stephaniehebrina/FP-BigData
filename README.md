@@ -1,6 +1,6 @@
 # Data Lakehouse: Problem-Based Learning
 
-## Kelompok  
+## Kelompok  1
 | Nama                            | NRP        |
 |---------------------------------|------------|
 | Stephanie Hebrina Mabunbun Simatupang | 5027221069 |
